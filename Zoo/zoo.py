@@ -1,36 +1,149 @@
 # Zoo/zoo.py
+# ASCII-зображення тварин
+camel = r"""
+The camel habitat...
+___.-''''-.
+/___ @     |
+',,,,.    | _.'''''''._
+'     |   / \
+|     \ _.-' \
+|    '.-' '-.
+|     ',
+|      '',
+',,-, ':;
+',,| ;,, ,' ;;
+! ; !'',,,',',,,,'! ; ;:
+: ; ! ! ! ! ; ; :;
+; ; ! ! ! ! ; ; ;,
+; ; ! ! ! ! ; ;
+; ; ! ! ! ! ; ;
+;,, !,! !,! ;,;
+/_I L_I L_I /_I
+Look at that!
+"""
 
-# ===== Етап 1: Привітання =====
-zoo_name = "MyZoo"
-print(f"Welcome to {zoo_name}!")
-print("Here you can see and manage the animals in our zoo.")
+lion = r"""
+The lion habitat...
+                                               ,w.
+                                             ,YWMMw  ,M  ,
+                        _.---.._   __..---._.'MMMMMw,wMWmW,
+                   _.-""        '''           YP"WMMMMMMMMMb,
+                .-' __.'                   .'     MMMMW^WMMMM;
+    _,        .'.-'"; `,       /`     .--""      :MMM[==MWMW^;
+ ,mM^"     ,-'.'   /   ;      ;      /   ,       MMMMb_wMW"  @\
+,MM:.    .'.-'   .'     ;     `\    ;     `,     MMMMMMMW `"=./`-,
+WMMm__,-'.'     /      _.\      F'''-+,,   ;_,_.dMMMMMMMM[,_ / `=_}
+"^MP__.-'    ,-' _.--""   `-,   ;       \  .'\ ,MMMMMMMMMMW^``; __|
+           /   .'            ; ;         )  )`{  \ `"^W^`,   \  :
+          /  .'             /  (       .'  /     Ww._     `.  `"
+         /  Y,              `,  `-,=,_{   ;      MMMP`""-,  `-._.-,
+        (--, )                `,_ / `) \/"")      ^"      `-, -;"\:
+The lion is roaring!
+"""
 
-# ===== Етап 2: Створення списку тварин =====
-animals = []  # порожній список тварин
-print("Currently, there are no animals in the zoo.")
+deer = r"""
+The deer habitat...
+   /|       |\
+`__\\       //__'
+   ||      ||
+ \__`\     |'__/
+   `_\\   //_'
+   _.,:---;,._
+   \_:     :_/
+     |@. .@|
+     |     |
+     ,\.-./ \
+     ;;`-'   `---__________-----.-.
+     ;;;                         \_\
+     ';;;                         |
+      ;    |                      ;
+       \   \     \        |      /
+        \_, \    /        \     |\
+          |';|  |,,,,,,,,/ \    \ \_
+          |  |  |           \   /   |
+          \  \  |           |  / \  |
+           | || |           | |   | |
+           | || |           | |   | |
+           | || |           | |   | |
+           |_||_|           |_|   |_|
+          /_//_/           /_/   /_/
+Pretty good!
+"""
 
-# ===== Етап 3: Додавання та перегляд тварин =====
+goose = r"""
+The goose habitat...
+                                    _
+                                ,-"" "".
+                              ,'  ____  `.
+                            ,'  ,'    `.  `._
+   (`.         _..--.._   ,'  ,'        \    \
+  (`-.\    .-""        ""'   /          (  d _b
+ (`._  `-"" ,._             (            `-(   \
+ <_  `     (  <`<            \              `-._\
+  <`-       (__< <           :
+   (__        (_<_<          ;
+    `------------------------------------------
+Beautiful!
+"""
+
+bat = r"""
+The bat habitat...
+_________________               _________________
+ ~-.              \  |\___/|  /              .-~
+     ~-.           \ / o o \ /           .-~
+        >           \\  W  //           <
+       /             /~---~\             \
+      /_            |       |            _\
+         ~-.        |       |        .-~
+            ;        \     /        i
+           /___      /\   /\      ___\
+                ~-. /  \_/  \ .-~
+                   V         V
+It's doing fine.
+"""
+
+rabbit = r"""
+The rabbit habitat...
+         ,
+        /|      __
+       / |   ,-~ /
+      Y :|  //  /
+      | jj /( .^
+      >-"~"-v"
+     /       Y
+    jo  o    |
+   ( ~T~     j
+    >._-' _./
+   /   "~"  |
+  Y     _,  |
+ /| ;-"~ _  l
+/ l/ ,-"~    \
+\//\/      .- \
+ Y        /    Y
+ l       I     !
+ ]\      _\    /"\
+(" ~----( ~   Y.  )
+It looks fine!
+"""
+
+# Створюємо список усіх тварин
+animals = [camel, lion, deer, goose, bat, rabbit]
+
+# Цикл для перегляду тварин
 while True:
-    print("\nChoose an action:")
-    print("1. Add an animal")
-    print("2. Show all animals")
-    print("3. Exit")
+    user_input = input("Please enter the number of the habitat you would like to view: > ")
     
-    choice = input("> ")
-    
-    if choice == "1":
-        animal_name = input("Enter animal name: ")
-        animals.append(animal_name)
-        print(f"{animal_name} has been added to the zoo.")
-    elif choice == "2":
-        if animals:
-            print("Animals in the zoo:")
-            for i, animal in enumerate(animals, start=1):
-                print(f"{i}. {animal}")
-        else:
-            print("The zoo is empty.")
-    elif choice == "3":
-        print("Goodbye! Thanks for visiting the zoo.")
+    if user_input == "exit":
+        print("See you later!")
         break
+    
+    # Перевіряємо, чи введено число
+    if user_input.isdigit():
+        num = int(user_input)
+        if 0 <= num < len(animals):
+            print(animals[num])
+        else:
+            print("Invalid number, please try again.")
     else:
-        print("Invalid choice. Please try again.")
+        print("Invalid input, please enter a number or 'exit'.")
+1
