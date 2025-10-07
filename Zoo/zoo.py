@@ -34,14 +34,14 @@ lion = r"""
 The lion habitat...
                                                ,w.
                                              ,YWMMw  ,M  ,
-                        _.---.._   __..---._.'MMMMMw,wMWmW,
+                        _.---.._   ..---._.'MMMMMw,wMWmW,
                    _.-""        '''           YP"WMMMMMMMMMb,
-                .-' __.'                   .'     MMMMW^WMMMM;
-    _,        .'.-'"; `,       /`     .--""      :MMM[==MWMW^;
+                .-' .'                   .'     MMMMW^WMMMM;
+    _,        .'.-'"; ,       /     .--""      :MMM[==MWMW^;
  ,mM^"     ,-'.'   /   ;      ;      /   ,       MMMMb_wMW"  @\
-,MM:.    .'.-'   .'     ;     `\    ;     `,     MMMMMMMW `"=./`-,
+,MM:.    .'.-'   .'     ;     \    ;     ,     MMMMMMMW "=./-,
 WMMm__,-'.'     /      _.\      F'''-+,,   ;_,_.dMMMMMMMM[,_ / `=_}
-"^MP__.-'    ,-' _.--""   `-,   ;       \  .'\ ,MMMMMMMMMMW^``; __|
+"^MP__.-'    ,-' _.--""   `-,   ;       \  .'\ ,MMMMMMMMMMW^``; |
            /   .'            ; ;         )  )`{  \ `"^W^`,   \  :
           /  .'             /  (       .'  /     Ww._     `.  `"
          /  Y,              `,  `-,=,_{   ;      MMMP`""-,  `-._.-,
@@ -51,9 +51,9 @@ The lion is roaring!
 deer = r"""
 The deer habitat...
    /|       |\
-`__\\       //__'
-   ||      ||
- \__`\     |'__/
+`__\\       //'
+         
+ \__`\     |'/
    `_\\   //_'
    _.,:---;,._
    \_:     :_/
@@ -87,8 +87,8 @@ The goose habitat...
   (`-.\    .-""        ""'   /          (  d _b
  (`._  `-"" ,._             (            `-(   \
  <_  `     (  <`<            \              `-._\
-  <`-       (__< <           :
-   (__        (_<_<          ;
+  <`-       (< <           :
+   (        (_<_<          ;
     `------------------------------------------
 Beautiful!"""
 
@@ -110,7 +110,7 @@ It's doing fine."""
 rabbit = r"""
 The rabbit habitat...
          ,
-        /|      __
+        /|      
        / |   ,-~ /
       Y :|  //  /
       | jj /( .^
@@ -134,9 +134,7 @@ It looks fine!"""
 animals = [camel, lion, deer, goose, bat, rabbit]
 
 # запит номера від користувача
-number = int(input("Please enter the number of the habitat you would like to view: "))
-
-# виведення відповідної тварини
+number = int(input("Please enter the number of the habitat you would like to view: "))# виведення відповідної тварини
 print(animals[number])
 print("---")
 print("You've reached the end of the program.")
