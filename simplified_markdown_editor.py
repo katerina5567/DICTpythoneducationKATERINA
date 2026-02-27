@@ -44,8 +44,9 @@ def add_header():
     return f"{'#' * level} {text}\n"
 
 
+# ВИПРАВЛЕНО: тепер повертає два переноси для нового абзацу
 def add_new_line():
-    return "\n"
+    return "\n\n"
 
 
 def add_list(list_type):
@@ -59,7 +60,9 @@ def add_list(list_type):
         except ValueError:
             print("The number of rows should be greater than zero")
 
-    result = ""
+    # ВИПРАВЛЕНО: додаємо початковий \n, щоб список починався з нового рядка
+    result = "\n"
+    
     for i in range(1, rows + 1):
         row_text = input(f"Row #{i}: ")
         if list_type == "ordered-list":
